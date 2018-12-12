@@ -27,6 +27,8 @@ Mappings:
       AMI: ami-c2680fa4
     ap-northeast-2:
       AMI: ami-3e04a450
+    ap-northeast-3:
+      AMI: ami-86424cfb
     ap-southeast-1:
       AMI: ami-4f89f533
     ap-southeast-2:
@@ -41,6 +43,8 @@ Mappings:
       AMI: ami-db1688a2
     eu-west-2:
       AMI: ami-6d263d09
+    eu-north-1:
+      AMI: ami-07ec6279
     eu-west-3:
       AMI: ami-5ce55321
     sa-east-1:
