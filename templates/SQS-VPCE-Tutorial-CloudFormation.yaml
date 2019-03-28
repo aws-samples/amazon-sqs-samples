@@ -13,6 +13,8 @@ Parameters:
     Default: 0.0.0.0/0
     AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
+Conditions:
+  IsT3Supported: !Equals [!Ref 'AWS::Region', eu-north-1]
 Mappings:
   RegionMap:
     us-east-1:
@@ -42,7 +44,7 @@ Mappings:
     eu-west-2:
       AMI: ami-6d263d09
     eu-north-1:
-      AMI: ami-07ec6279
+      AMI: ami-87fe70f9
     eu-west-3:
       AMI: ami-5ce55321
     sa-east-1:
@@ -117,7 +119,7 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       KeyName: !Ref KeyName
-      InstanceType: t2.micro
+      InstanceType: !If [IsT3Supported, t3.micro, t2.micro]
       ImageId: !FindInMap
         - RegionMap
         - !Ref 'AWS::Region'
