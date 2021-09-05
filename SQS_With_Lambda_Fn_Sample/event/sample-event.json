@@ -1,0 +1,14 @@
+{
+    "Records": [
+      {
+        "messageId": "dbd99b32-ba44-4fe3-bc7c-de5767c3cd224",
+        "receiptHandle": "AQEB7OkfTQVDK6GX7DPIkxzSvCeNuS8hs4NqWNxmL==",
+        "body": "{\n\"message\":\"test\"\n}",
+        "messageAttributes": {},
+        "md5OfBody": "078cafd5f9615b359f3440a27327b8bb",
+        "eventSource": "aws:sqs",
+        "eventSourceARN": "arn:aws:sqs:<region>:<account_id>:<queue_name>",
+        "awsRegion": "<region>"
+      }
+    ]
+  }
